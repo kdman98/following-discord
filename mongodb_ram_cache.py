@@ -58,7 +58,6 @@ for repeat in range(1, repeat_times + 1):
         }
         write_result = collection.insert_one(document_insert)
 
-
     end_time = time.time()
     elapsed_time = (end_time - start_time) * 1000
     if max < elapsed_time:
@@ -68,11 +67,6 @@ for repeat in range(1, repeat_times + 1):
     sum_time += elapsed_time
 
 print(max, min, sum_time / repeat_times)
-
-# query_result = collection.delete_many({})
-# print("Query result:", query_result)
-
-
 
 # Close the connection
 client.close()
