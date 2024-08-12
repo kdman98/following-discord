@@ -31,7 +31,7 @@ def insert_row():
 
 
 def edit_row():
-    session.execute("UPDATE test.test_table SET data = %s", ('updated_value', row_id))
+    session.execute("UPDATE test.test_table SET data = %s WHERE id = %s", ('updated_value', row_id))
     # session.execute("UPDATE test.test_table SET data = %s WHERE id = %s IF EXISTS", ('updated_value', row_id))
     time.sleep(0.01)
 
