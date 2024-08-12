@@ -74,13 +74,13 @@ def performance_test():
     lwt_times = []
     id_list = []
 
-    performance_test_initial_rows = 1000
+    performance_test_initial_rows = 1000000
     for _ in range(performance_test_initial_rows):
         id = uuid.uuid4()
         insert_message(id)
         id_list.append(id)
 
-    experiment_repetitions = 100
+    experiment_repetitions = 1000
     for i in range(experiment_repetitions):
         start = time.time()
         discord_approach(id_list[i])
@@ -91,8 +91,8 @@ def performance_test():
         lwt_approach(id_list[i])
         lwt_times.append(time.time() - start)
 
-    print(f"Average time for Discord approach: {sum(discord_times) / len(discord_times) * 1000} ms")
     print(f"Average time for LWT approach: {sum(lwt_times) / len(lwt_times) * 1000} ms")
+    print(f"Average time for Discord approach: {sum(discord_times) / len(discord_times) * 1000} ms")
 
 
 # Run the performance test
