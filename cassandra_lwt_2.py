@@ -48,9 +48,8 @@ def update_message_lwt(id, content):
     )
 
 
-# Discord's approach: UPDATE and then delete if the content is None
 def discord_approach(id):
-    content = None if random.random() < 0.1 else "discord approach content"  # TODO: FIX
+    content = None if random.random() < 0.01 else "discord approach content"
     update_message(id, content)
     session.execute(
         "SELECT * FROM test_keyspace.messages WHERE id = %s",
@@ -62,7 +61,6 @@ def discord_approach(id):
         session.execute("DELETE FROM test_keyspace.messages WHERE id = %s", (id,))
 
 
-# LWT approach: Use Lightweight Transaction to ensure content is not None
 def lwt_approach(id):
     content = "lwt approach content"
     update_message_lwt(id, content)
