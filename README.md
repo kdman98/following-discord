@@ -1,4 +1,6 @@
-https://discord.com/blog/how-discord-stores-billions-of-messages
-https://discord.com/blog/how-discord-stores-trillions-of-messages
+Ch1 : https://discord.com/blog/how-discord-stores-billions-of-messages
+Ch2 : https://discord.com/blog/how-discord-stores-trillions-of-messages
 
-WIP, just following what Discord team has made and what problems they encountered.
+I'm just following what Discord team has made and what problems they encountered.
+Ch1 : https://wandering-marlin-2dc.notion.site/Following-Discord-73b7211700364f599bcde3f574735279
+In the process of finalizing and reviewing!!
